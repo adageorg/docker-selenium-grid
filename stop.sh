@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if test -f .env; then
-  source .env
-fi
-
-DOCKER_COMPOSE="${DOCKER_COMPOSE:-docker compose}"
+source preamble.sh
 
 $DOCKER_COMPOSE down --remove-orphans
